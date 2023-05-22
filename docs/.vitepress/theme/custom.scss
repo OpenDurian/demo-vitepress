@@ -1,0 +1,70 @@
+@import "../../assets/scss/app.scss";
+.opd-btn {
+        min-width: auto;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0 1rem 1rem 0;
+            &.-primary {
+        color: $white-color;
+        background-color: $primary-color;
+
+        &:hover,
+        &:active {
+            background-color: $primary-hover-color;
+        }
+    }
+
+    &.-social {
+        min-height: 40px;
+        padding: 0.375rem 0.5rem;
+        -moz-column-gap: 0.5rem;
+        column-gap: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        img{
+            width:24px;
+        }
+    }
+
+    &.-blue {
+        color: $white-color;
+        background-color: $blue-color;
+
+        &:hover,
+        &:active {
+            color: $white-color;
+            background-color: $blue-800-color;
+        }
+    }
+
+    &.-green {
+        color: $white-color;
+        background-color: $green-color;
+
+        &:hover,
+        &:active {
+            color: $white-color;
+            background-color: $green-800-color;
+        }
+    }
+
+    &.-cancel,
+    &.-no-border {
+
+        --tw-shadow: none;
+        box-shadow: none;
+        color: $gray-900-color;
+
+        &:hover,
+        &:active {
+            background-color: $gray-100-color;
+            --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    }
+
+    &.-cancel {
+        min-width: inherit;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    }

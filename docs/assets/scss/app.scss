@@ -1,0 +1,483 @@
+//@import "fonts.scss";
+@import "color-default.scss";
+@import "color-primary.scss";
+@import "color.scss";
+@import "shadows.scss";
+@import "headings.scss";
+@import "_button.scss";
+
+
+body {
+    min-width: 300px;
+    font-family: "ibm_plex_sans_thai", arial;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $gray-900-color;
+    background-color: $gray-100-color;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+select {
+    padding-right: 2.5rem;
+}
+
+.opd {
+
+    &-app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding-top: 64px;
+    }
+
+    &-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $white-color;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 6px 0px, rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
+        z-index: 8888;
+    }
+
+    &-footer {
+        text-align: center;
+        background-color: $green-color;
+        margin-top: auto;
+
+        p {
+            line-height: 1.4;
+            color: $white-color;
+
+            small {
+                color: $white-color;
+            }
+        }
+
+        nav {
+            color: $white-color;
+
+            a {
+                font-size: 0.875rem;
+                color: $white-color;
+            }
+        }
+    }
+
+    &-box {
+        width: 100%;
+        
+        margin: 2.5rem auto;
+        border-radius: 1rem;
+        background-color: $white-color;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 4px 0px, rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
+
+        @media (max-width: 767.98px) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &-code {
+        color: $gray-200-color;
+        background-color: $gray-800-color;
+        overflow-x: auto;
+        font-weight: 400;
+        font-size: .875em;
+        line-height: 1.7142857;
+        border-radius: 0.75rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        display: flex;
+    }
+
+    &-form-label {
+        display: block;
+        width: 100%;
+        margin: 0;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $gray-700-color;
+
+        &::after {
+            color: $red-900-color;
+            margin-left: 0.25rem;
+        }
+    }
+
+    &-form-overlapping-label {
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $gray-700-color;
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        margin-top: -0.75rem;
+        padding: 0 0.5rem;
+        left: 0.75rem;
+        border-radius: 1rem;
+        background: $white-color;
+
+        &::after {
+            color: $red-900-color;
+            margin-left: 0.25rem;
+        }
+    }
+
+    &-form-input,
+    &-form-file-input,
+    &-form-search-input,
+    &-form-select,
+    &-form-textarea,
+    {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 1.25rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $gray-900-color;
+    border-width: 0px;
+    border-radius: 1rem;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
+    --tw-ring-inset: inset;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color), var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color), 0 0 rgba(0, 0, 0, 0);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+
+    &::placeholder {
+        color: $gray-500-color;
+    }
+
+    &:disabled {
+        background-color: $gray-50-color;
+    }
+}
+
+&-form-input-icon {
+    top: 0;
+    left: 0.75rem;
+    height: 2.25rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        color: $gray-400-color;
+    }
+}
+
+&-form-file-input {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+
+    &::file-selector-button {
+        margin-right: 1.25rem;
+        padding: 0.5rem 1.25rem;
+        border: none;
+        background-color: $blue-color;
+        color: $white-color;
+        cursor: pointer;
+    }
+
+    &.opd-form-feedback {
+        &::file-selector-button {
+            background-color: $red-900-color;
+        }
+    }
+}
+
+&-form-textarea {
+    height: 5.25rem;
+}
+
+&-dropzone {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.75rem;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: $gray-300-color;
+    font-weight: 600;
+    cursor: pointer;
+
+    .opd-form-label-dropzone {
+        position: relative;
+        color: $blue-color;
+        background-color: $white-color;
+    }
+
+    &:hover {
+        .opd-form-label-dropzone {
+            color: $blue-800-color;
+        }
+    }
+}
+
+&-form-helptext {
+    margin-top: 0.5rem;
+    color: $gray-400-color;
+}
+
+&-form-explain {
+    margin-top: 0.5rem;
+    color: $red-900-color;
+}
+
+&-form-feedback {
+    color: $red-900-color;
+    --tw-ring-color: #EE443D !important;
+
+    &~.opd-form-input-icon svg,
+    &~.opd-form-explain {
+        color: $red-900-color !important;
+    }
+
+    &:focus {
+        color: $gray-900-color;
+
+        &~.opd-form-input-icon svg {
+            color: $gray-500-color !important;
+        }
+    }
+}
+
+&-form-input-group {
+    position: relative;
+
+    .opd-form-input {
+        padding-left: 2.25rem;
+    }
+}
+
+&-file-upload {
+    border-width: 0px;
+}
+
+&-form-radio,
+&-form-radio-small,
+&-form-checkbox,
+&-form-checkbox-small {
+    cursor: pointer;
+}
+
+&-form-radio,
+&-form-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+&-form-radio-small,
+&-form-checkbox-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+&-form-label-radio,
+&-form-label-radio-small,
+&-form-label-checkbox,
+&-form-label-checkbox-small {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: $gray-700-color;
+    cursor: pointer;
+
+    &~p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+
+&-form-toggle {
+
+    &~div {
+        background-color: $gray-200-color;
+
+        &.dot {
+            background-color: $white-color;
+        }
+    }
+
+    &:checked {
+        &~div {
+            background-color: $blue-color;
+        }
+
+        &~.dot {
+            transform: translateX(100%);
+            background-color: $white-color;
+        }
+    }
+}
+
+&-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 1rem;
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    &-primary {
+        color: $white-color;
+        background-color: $primary-color;
+
+        &:hover,
+        &:active {
+            background-color: $primary-hover-color;
+        }
+    }
+
+    &-social {
+        min-height: 40px;
+        padding: 0.375rem 0.5rem;
+        -moz-column-gap: 0.5rem;
+        column-gap: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    &-blue {
+        color: $white-color;
+        background-color: $blue-color;
+
+        &:hover,
+        &:active {
+            color: $white-color;
+            background-color: $blue-800-color;
+        }
+    }
+
+    &-green {
+        color: $white-color;
+        background-color: $green-color;
+
+        &:hover,
+        &:active {
+            color: $white-color;
+            background-color: $green-800-color;
+        }
+    }
+
+    &-cancel,
+    &-no-border {
+
+        --tw-shadow: none;
+        box-shadow: none;
+        color: $gray-900-color;
+
+        &:hover,
+        &:active {
+            background-color: $gray-100-color;
+            --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+    }
+
+    &-cancel {
+        min-width: inherit;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+
+&-form-group-search {
+    display: flex;
+
+    .opd-form-search-input {
+        padding-right: 0.75rem;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .opd-btn {
+        min-width: auto;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+}
+
+&-card {
+    width: 100%;
+    margin: auto;
+    padding: 1.25rem;
+    background-color: $white-color;
+
+    @media (min-width: 768px) {
+        padding: 2.5rem;
+        border: 1px solid $gray-200-color;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+
+&-404-pages {
+    display: grid;
+
+    @media (max-width: 767.98px) {
+        .opd-btn {
+            min-width: inherit;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+&-signin {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+    .opd-text-or {
+        font-weight: 500;
+        color: $gray-600-color;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.75rem;
+        background-color: $white-color;
+    }
+
+    @media (min-width: 768px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 767.98px) {
+        background-color: $white-color;
+    }
+}
+}
