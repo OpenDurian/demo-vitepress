@@ -2,15 +2,20 @@
   "name": "@opendurian/demo-vitepress",
 "description": "Common styles, build from Figma Design Tokens",
 "author": "tuanrit.s@opendurian.com",
+"version": "1.0.0",
 "homepage": "https://github.com/OpenDurian/demo-vitepress",
 "license": "MIT",
 "repository": {
   "type": "git",
-  "url": "https://github.com/OpenDurian/demo-vitepress"
+  "url": "https://github.com/OpenDurian/demo-vitepress.git"
 },
 "publishConfig": {
   "@OpenDurian:registry": "https://github.com/OpenDurian/demo-vitepress.git"
 },
+"npmUser": {
+  "name": "open-durian-dev",
+  "email": "tuanrit.s@opendurian.com"
+  },
   "devDependencies": {
     "vitepress": "^1.0.0-alpha.76"
   },
